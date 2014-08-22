@@ -1,0 +1,21 @@
+require 'rails_helper'
+
+RSpec.describe "Messages", :type => :request do
+  before(:each) do
+    @message = FactoryGirl.create(:message)
+  end
+
+  describe "GET /messages/1" do
+    it "works!" do
+      get message_path(@message)
+      expect(response.status).to be(200)
+    end
+  end
+
+  describe "GET /messages/edit/1" do
+    it "works!" do
+      get edit_message_path(@message)
+      expect(response.status).to be(200)
+    end
+  end
+end

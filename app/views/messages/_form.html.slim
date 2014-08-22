@@ -1,0 +1,17 @@
+= form_for @message, html: { class: "form-horizontal" } do |f|
+  - if @message.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@message.errors.count, "error")} prohibited this message from being saved:"
+      ul
+        - @message.errors.full_messages.each do |message|
+          li = message
+
+  .form-group
+    .control-label.col-sm-2
+      = f.label :body
+    .col-sm-6
+      = f.text_area :body, class: "form-control"
+
+  .form-group
+    .col-sm-10.col-sm-offset-2
+      = f.submit class: "btn btn-primary"

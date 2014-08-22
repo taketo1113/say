@@ -1,0 +1,30 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  common:
+    site_title: "Say!"
+  helpers:
+    actions: "Actions"
+    links:
+      back: "Back"
+      cancel: "Cancel"
+      confirm: "Are you sure?"
+      destroy: "Delete"
+      new: "New"
+      edit: "Edit"
+      update: "Update"
+      login: "Login"
+      logout: "Logout"
+  views:
+    messages:
+      show:
+        title: 'Message'
+      edit:
+        title: 'Editing message'
+  activerecord:
+    models:
+      message: message
+    attributes:
+      message:
+        body: message
