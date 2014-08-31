@@ -16,5 +16,8 @@ http://stedolan.github.io/jq/
 
 ## Demo
 
-http://sayy.herokuapp.com/messages/1.json
+http://sayy.herokuapp.com/
+
+- Edit message
+http://sayy.herokuapp.com/messages/1/edit
 
