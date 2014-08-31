@@ -1,7 +1,8 @@
 # Say
 
-Simple message application
-Speak message with say command (Mac OS)
+Simple message application.
+
+Speak message with say command (Mac OS).
 
 ## Usage(client)
 
