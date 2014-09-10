@@ -12,5 +12,6 @@ url=http://sayy.herokuapp.com/messages/1.json
 JQ=jq
 SAY=say
 CURL=curl
+SED=sed
 
-$CURL -s $url | $JQ '.["body"]' | $SAY
+$CURL -s $url | $JQ '.["body"]' | $SED s/^\"//g | $SED s/\"$//g | $SAY

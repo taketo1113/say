@@ -13,6 +13,7 @@ JQ=jq
 SAY=say
 CURL=curl
 ECHO=/bin/echo
+SED=sed
 
 while true
 do
@@ -20,7 +21,7 @@ do
     if [ "${message}" = "" -o "${new_message}" != "${message}" ]; then
 	message=${new_message}
 	$ECHO "`date '+%Y/%m/%d %H:%M:%S'`: $message"
-	$ECHO ${message} | $SAY
+	$ECHO ${message} | $SED s/^\"//g | $SED s/\"$//g | $SAY
     fi
 
     sleep 5
