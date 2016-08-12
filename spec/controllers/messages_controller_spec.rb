@@ -39,7 +39,7 @@ RSpec.describe MessagesController, :type => :controller do
   describe "GET show" do
     it "assigns the requested message as @message" do
       message = Message.create! valid_attributes
-      get :show, {:id => message.to_param}, valid_session
+      process :show, method: :GET, params: { id: message.to_param }, session: valid_session
       expect(assigns(:message)).to eq(message)
     end
   end
@@ -47,7 +47,7 @@ RSpec.describe MessagesController, :type => :controller do
   describe "GET edit" do
     it "assigns the requested message as @message" do
       message = Message.create! valid_attributes
-      get :edit, {:id => message.to_param}, valid_session
+      process :edit, method: :GET, params: { id: message.to_param }, session: valid_session
       expect(assigns(:message)).to eq(message)
     end
   end
@@ -60,20 +60,20 @@ RSpec.describe MessagesController, :type => :controller do
 
       it "updates the requested message" do
         message = Message.create! valid_attributes
-        put :update, {:id => message.to_param, :message => new_attributes}, valid_session
+        process :update, method: :put, params: { id: message.to_param, :message => new_attributes }, session: valid_session
         message.reload
         expect(message.body).to eq new_attributes[:body]
       end
 
       it "assigns the requested message as @message" do
         message = Message.create! valid_attributes
-        put :update, {:id => message.to_param, :message => valid_attributes}, valid_session
+        process :update, method: :put, params: { id: message.to_param, :message => valid_attributes }, session: valid_session
         expect(assigns(:message)).to eq(message)
       end
 
       it "redirects to the message" do
         message = Message.create! valid_attributes
-        put :update, {:id => message.to_param, :message => valid_attributes}, valid_session
+        process :update, method: :put, params: { id: message.to_param, :message => valid_attributes }, session: valid_session
         expect(response).to redirect_to(message)
       end
     end
@@ -81,13 +81,13 @@ RSpec.describe MessagesController, :type => :controller do
 #    describe "with invalid params" do
 #      it "assigns the message as @message" do
 #        message = Message.create! valid_attributes
-#        put :update, {:id => message.to_param, :message => invalid_attributes}, valid_session
+#        process :update, method: :put, params: { id: message.to_param, :message => invalid_attributes }, session: valid_session
 #        expect(assigns(:message)).to eq(message)
 #      end
 #
 #      it "re-renders the 'edit' template" do
 #        message = Message.create! valid_attributes
-#        put :update, {:id => message.to_param, :message => invalid_attributes}, valid_session
+#        process :update, method: :put, params: { id: message.to_param, :message => invalid_attributes }, session: valid_session
 #        expect(response).to render_template("edit")
 #      end
 #    end
