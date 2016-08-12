@@ -9,26 +9,37 @@ gem 'slim-rails'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
-gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
 
+gem 'jquery-rails'
+gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
-# bundle exec rake doc:rails generates the API under doc/api.
-#gem 'sdoc', '~> 0.4.0',          group: :doc
+# Use Redis adapter to run Action Cable in production
+# gem 'redis', '~> 3.0'
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
 # gem 'passenger'
-
-gem 'spring',        group: :development
 
 group :development do
   gem 'capistrano-ext'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
+end
+
+group :development, :test do
+  gem 'byebug', platform: :mri
+end
+
+group :development do
+  gem 'web-console'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :development, :test do
@@ -40,6 +51,5 @@ group :development, :test do
 #  gem 'selenium-webdriver'
 end
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
