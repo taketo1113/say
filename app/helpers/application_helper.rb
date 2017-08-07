@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def hbr(str)
-    str = html_escape(str)
+    str = ERB::Util.html_escape(str)
     str.gsub(/\r\n|\r|\n/, "<br />")
   end
 
@@ -33,10 +33,10 @@ module ApplicationHelper
   # parent - The Resource that has_* child
   # child - The Resource that belongs_to parent.
   def shallow_args(parent, child)
-    params[:action] == 'new' ? [parent, child] : child
+    child.new_record? ? [parent, child] : child
   end
 
   def shallow_deep_args(parent, child, grandchild)
-    params[:action] == 'new' ? [parent, child, grandchild] : grandchild
+    grandchild.new_record? ? [parent, child, grandchild] : grandchild
   end
 end
