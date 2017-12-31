@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Messages", :type => :request do
   before(:each) do
-    @message = FactoryGirl.create(:message)
+    @message = FactoryBot.create(:message)
   end
 
   describe "GET /messages/1" do
