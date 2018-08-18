@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.1'
 
-gem 'rails', '5.1.6'
+gem 'rails', '5.2.1'
 
 gem 'mysql2'
 
@@ -28,6 +28,8 @@ gem 'rack-cors'
 #  gem 'capistrano-rbenv'
 #  gem 'capistrano-bundler'
 #end
+
+gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
