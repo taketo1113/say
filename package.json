@@ -2,7 +2,11 @@
   "name": "say",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^4.0.7"
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "^4.0.7",
+    "bootstrap-sass": "^3.4.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.8.2"

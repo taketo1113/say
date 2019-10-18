@@ -8,13 +8,7 @@ gem 'mysql2'
 gem 'slim-rails'
 gem 'sassc-rails'
 gem 'webpacker', '~> 4.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails'
-
-gem 'jquery-rails'
-gem 'jbuilder', '~> 2.5'
-gem 'bootstrap-sass'
-gem 'font-awesome-rails'
+gem 'jbuilder', '~> 2.7'
 
 gem 'rack-cors'
 
