@@ -54,4 +54,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # for rails 6 & rspec 3.8 => ActionView::Template::Error: wrong number of arguments
+  config.render_views
 end
