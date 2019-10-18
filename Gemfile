@@ -7,6 +7,7 @@ gem 'mysql2'
 
 gem 'slim-rails'
 gem 'sassc-rails'
+gem 'webpacker', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 
