@@ -4,15 +4,12 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-## Environment normalisation:
+# Ignore bundler config.
 /.bundle
-/vendor/bundle
+vendor/bundle
 
 # config
 config/database.yml
-
-# system files
-public/system/*
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -20,12 +17,11 @@ public/system/*
 !/log/.keep
 !/tmp/.keep
 
-# Ignore uploaded files in development
+# Ignore uploaded files in development.
 /storage/*
+!/storage/.keep
 
-/node_modules
-/yarn-error.log
-
+/public/system/*
 /public/assets
 .byebug_history
 
