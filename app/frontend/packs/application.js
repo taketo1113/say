@@ -1,3 +1,3 @@
 require("../javascripts/common")
 
-require("../javascripts/application")
+//require("../javascripts/application")
