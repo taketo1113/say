@@ -9,7 +9,7 @@ gem 'puma', '~> 4.3'
 
 gem 'slim-rails'
 gem 'sassc-rails'
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.0'
 gem 'jbuilder', '~> 2.7'
 
 gem 'rack-cors'
