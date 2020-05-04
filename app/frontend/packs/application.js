@@ -1,3 +1,3 @@
-require("../javascripts/common")
+require("@js/common")
 
-//require("../javascripts/application")
+//require("@js/application")

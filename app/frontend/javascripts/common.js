@@ -21,4 +21,4 @@ require("@rails/ujs").start()
 import 'bootstrap-sass'
 
 // special entry point of application.css
-import "../stylesheets/application"
+import "@css/application"
