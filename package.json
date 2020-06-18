@@ -2,7 +2,7 @@
   "name": "say",
   "private": true,
   "dependencies": {
-    "@rails/ujs": "^6.0.3-1",
+    "@rails/ujs": "^6.0.3-2",
     "@rails/webpacker": "^5.0",
     "bootstrap-sass": "^3.4.1",
     "font-awesome": "^4.7.0",
