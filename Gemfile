@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.7.2'
 
-gem 'rails', '6.0.3.4'
+gem 'rails', '6.1.0'
 
-gem 'mysql2', '>= 0.4.4'
+gem 'mysql2', '~> 0.5'
 
 gem 'puma', '~> 4.3'
 
@@ -23,7 +23,7 @@ gem 'rack-cors'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '>= 1.4.4', require: false
 
 #group :development do
 #  gem 'capistrano-ext'
@@ -38,10 +38,10 @@ group :development, :test do
 end
 
 group :development do
-#  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.2'
+#  gem 'web-console', '>= 4.1.0'
+  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'listen', '~> 3.3'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'awesome_print'
   gem 'rails-erd'
 end
