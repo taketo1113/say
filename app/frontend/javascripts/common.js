@@ -10,8 +10,8 @@ import Rails from "@rails/ujs"
 //Rails.start()
 //ActiveStorage.start()
 
-//require("@rails/activestorage").start()
-//require("channels")
+import "core-js/stable"
+import "regenerator-runtime/runtime"
 
 // lib
 import 'bootstrap-sass'
