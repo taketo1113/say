@@ -12,41 +12,38 @@ html
     = content_for :header
 
   body
-    .navbar.navbar-inverse.navbar-static-top
-      .container
-        .navbar-header
-          button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
+    header
+      nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"
+        .container
           a.navbar-brand href="#{root_path}"
-            span.fa.fa-terminal
-            |  #{t('common.site_title')}
-        .navbar-collapse.collapse
-          ul.nav.navbar-nav
-            li
-              a href="#" About
-            li
-              a href="#{edit_message_path(1)}" Edit
-        /!.navbar-collapse.collapse
+            span.fa.fa-terminal.me-1
+            | #{t('common.site_title')}
+          button.navbar-toggler type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            span.navbar-toggler-icon
+          .collapse.navbar-collapse id="navbarCollapse"
+            ul.navbar-nav.me-auto.mb-2.mb-md-0
+              li.nav-item
+                a.nav-link href="#" About
+              li.nav-item
+                a.nav-link href="#{edit_message_path(1)}" Edit
 
-    .container
+    .main.container
       .row
-        .col-sm-12.col-lg-12
+        .col-12
           - unless notice.blank?
             p.alert.alert-success #{notice}
           - unless alert.blank?
             p.alert.alert-danger #{alert}
 
-          .page-header
-            h1 #{yield :title}
+          - unless yield(:title).blank?
+            h1.page-header.mb-3 #{yield :title}
 
           = yield
-    
-      footer
+
+    footer
+      .container
         hr
-        p.text-right
-          | #{t('common.site_title')} 
-          span.fa.fa-cubes
-          |  taketoketa.org
+        p.float-end
+          | #{t('common.site_title')}
+          span.fa.fa-cubes.fa-fw.mx-1
+          | taketoketa.org
