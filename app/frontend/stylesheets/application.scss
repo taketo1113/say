@@ -1,8 +1,5 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
-$fa-font-path: "~font-awesome/fonts/";
-@import "~font-awesome/scss/font-awesome.scss";
+// bootstrap
+@import "~bootstrap/scss/bootstrap";
 
 /*
  * Basic
@@ -10,7 +7,7 @@ $fa-font-path: "~font-awesome/fonts/";
 
 .main {
     &.container {
-	margin-top: 70px;
+	margin-top: 70px + 50px;
     }
 }
 
