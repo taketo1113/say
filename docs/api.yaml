@@ -1,0 +1,72 @@
+openapi: 3.0.0
+info:
+  title: Say
+  version: '1.0'
+  contact:
+    name: Taketo Takashima
+    email: t.taketo1113@gmail.com
+  description: Say API Spec
+servers:
+  - url: 'http://localhost:3000'
+  - url: 'https://sayy.herokuapp.com'
+    description: ''
+paths:
+  '/messages/{messageId}':
+    get:
+      summary: GET message
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Message'
+        '404':
+          description: Not Found
+      operationId: get-messages-1
+      description: Get message
+      tags:
+        - say
+    parameters:
+      - schema:
+          type: integer
+        name: messageId
+        in: path
+        required: true
+        description: Message ID
+components:
+  schemas:
+    Message:
+      description: ''
+      type: object
+      x-examples:
+        sample:
+          id: 1
+          body: げんざいこしょうはありません
+          created_at: '2021-01-01T12:00:00.000+09:00'
+          updated_at: '2021-01-01T12:00:00.000+09:00'
+      properties:
+        id:
+          type: integer
+          example: 1
+        body:
+          type: string
+          minLength: 1
+          example: げんざいこしょうはありません
+        created_at:
+          type: string
+          minLength: 1
+          format: date-time
+          example: '2021-01-01T12:00:00.000+09:00'
+        updated_at:
+          type: string
+          minLength: 1
+          format: date-time
+          example: '2021-01-01T12:00:00.000+09:00'
+      required:
+        - id
+        - body
+        - created_at
+        - updated_at
+tags:
+  - name: say

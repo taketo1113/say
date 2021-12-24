@@ -52,6 +52,7 @@ group :development, :test do
   gem 'capybara'
   gem 'webrat'
   gem 'factory_bot_rails'
+  gem 'committee-rails'
 #  gem 'selenium-webdriver'
 end
 
