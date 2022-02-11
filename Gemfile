@@ -5,7 +5,7 @@ gem 'rails', '6.1.4.3'
 
 gem 'mysql2', '~> 0.5'
 
-gem 'puma', '~> 5.5'
+gem 'puma', '~> 5.6'
 
 gem 'slim-rails'
 gem 'sassc-rails'
