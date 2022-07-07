@@ -11,7 +11,7 @@ gem 'slim-rails'
 gem 'jbuilder'
 
 gem "sprockets-rails"
-gem 'webpacker', '~> 5.0'
+gem 'jsbundling-rails'
 
 gem 'rack-cors'
 
@@ -52,6 +52,7 @@ group :development do
   gem 'spring'
   gem 'awesome_print'
   gem 'rails-erd'
+  gem 'foreman'
 end
 
 group :development, :test do
