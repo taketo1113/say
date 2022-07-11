@@ -33,9 +33,6 @@ config/database.yml
 /public/assets
 /app/assets/builds/*
 !/app/assets/builds/.keep
-# webpacker
-/public/packs
-/public/packs-test
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
