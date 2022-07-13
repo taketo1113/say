@@ -7,10 +7,11 @@ const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 // mode
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+const devtool = (mode === 'production') ? "source-map" : false;
 
 module.exports = {
   mode,
-  devtool: "source-map",
+  devtool: devtool,
   entry: {
     application: [
       "./app/frontend/packs/application.js",
