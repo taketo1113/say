@@ -1,19 +1,20 @@
 source "https://rubygems.org"
-ruby '3.3.0'
 
-gem 'rails', '7.1.2'
+ruby "3.3.0"
 
-gem 'mysql2', '~> 0.5'
+gem "rails", "7.1.2"
 
-gem 'puma', '>= 5.0'
+gem "mysql2", "~> 0.5"
 
-gem 'slim-rails'
-gem 'jbuilder'
+gem "puma", ">= 5.0"
+
+gem "slim-rails"
+gem "jbuilder"
 
 gem "sprockets-rails"
-gem 'jsbundling-rails'
+gem "jsbundling-rails"
 
-gem 'rack-cors'
+gem "rack-cors"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -37,26 +38,26 @@ group :development, :test do
 end
 
 #group :development do
-#  gem 'capistrano-ext'
-#  gem 'capistrano-rails'
-#  gem 'capistrano-rbenv'
-#  gem 'capistrano-bundler'
+#  gem "capistrano-ext"
+#  gem "capistrano-rails"
+#  gem "capistrano-rbenv"
+#  gem "capistrano-bundler"
 #end
 
 group :development do
-  # gem 'web-console'
-  gem 'rack-mini-profiler'
+  # gem "web-console"
+  gem "rack-mini-profiler"
   # gem "spring"
-  gem 'awesome_print'
-  gem 'rails-erd'
-  gem 'foreman'
+  gem "awesome_print"
+  gem "rails-erd"
+  gem "foreman"
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'rails-controller-testing'
-  gem 'capybara'
+  gem "rspec-rails"
+  gem "rails-controller-testing"
+  gem "capybara"
   gem "selenium-webdriver"
-  gem 'factory_bot_rails'
-  gem 'committee-rails'
+  gem "factory_bot_rails"
+  gem "committee-rails"
 end
