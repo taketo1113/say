@@ -21,6 +21,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     sourceMapFilename: "[file].map",
+    chunkFormat: "module",
     path: path.resolve(__dirname, "..", "..", "app/assets/builds"),
   },
   plugins: [
