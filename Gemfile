@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.3.5"
 
-gem "rails", "7.1.4.1"
+gem "rails", "7.1.4.2"
 
 gem "mysql2", "~> 0.5"
 
