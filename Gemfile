@@ -6,11 +6,13 @@ gem "mysql2", "~> 0.5"
 
 gem "puma", ">= 5.0"
 
-gem "slim-rails"
-gem "jbuilder"
+gem "dotenv-rails"
 
 gem "sprockets-rails"
 gem "jsbundling-rails"
+
+gem "slim-rails"
+gem "jbuilder"
 
 gem "rack-cors"
 

@@ -11,9 +11,7 @@ vendor/bundle
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
-
-# config
-config/database.yml
+!/.env.example
 
 # Ignore all logfiles and tempfiles.
 /log/*
