@@ -4,7 +4,7 @@ RSpec.configure do |config|
     schema_path: Rails.root.join('docs', 'api.yaml').to_s,
     query_hash_key: 'rack.request.query_hash',
     parse_response_by_content_type: false,
-    strict_reference_validation: false,
+    strict_reference_validation: false
   }
 
   include Committee::Rails::Test::Methods

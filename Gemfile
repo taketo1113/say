@@ -41,12 +41,12 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
-#group :development do
+# group :development do
 #  gem "capistrano-ext"
 #  gem "capistrano-rails"
 #  gem "capistrano-rbenv"
 #  gem "capistrano-bundler"
-#end
+# end
 
 group :development do
   # gem "web-console"

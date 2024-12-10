@@ -18,8 +18,7 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-RSpec.describe MessagesController, :type => :controller do
-
+RSpec.describe MessagesController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Message. As you add validations to Message, be sure to
   # adjust the attributes here as well.
@@ -60,37 +59,36 @@ RSpec.describe MessagesController, :type => :controller do
 
       it "updates the requested message" do
         message = Message.create! valid_attributes
-        process :update, method: :put, params: { id: message.to_param, :message => new_attributes }, session: valid_session
+        process :update, method: :put, params: { id: message.to_param, message: new_attributes }, session: valid_session
         message.reload
         expect(message.body).to eq new_attributes[:body]
       end
 
       it "assigns the requested message as @message" do
         message = Message.create! valid_attributes
-        process :update, method: :put, params: { id: message.to_param, :message => valid_attributes }, session: valid_session
+        process :update, method: :put, params: { id: message.to_param, message: valid_attributes }, session: valid_session
         expect(assigns(:message)).to eq(message)
       end
 
       it "redirects to the message" do
         message = Message.create! valid_attributes
-        process :update, method: :put, params: { id: message.to_param, :message => valid_attributes }, session: valid_session
+        process :update, method: :put, params: { id: message.to_param, message: valid_attributes }, session: valid_session
         expect(response).to redirect_to(message)
       end
     end
 
-#    describe "with invalid params" do
-#      it "assigns the message as @message" do
-#        message = Message.create! valid_attributes
-#        process :update, method: :put, params: { id: message.to_param, :message => invalid_attributes }, session: valid_session
-#        expect(assigns(:message)).to eq(message)
-#      end
-#
-#      it "re-renders the 'edit' template" do
-#        message = Message.create! valid_attributes
-#        process :update, method: :put, params: { id: message.to_param, :message => invalid_attributes }, session: valid_session
-#        expect(response).to render_template("edit")
-#      end
-#    end
+    #    describe "with invalid params" do
+    #      it "assigns the message as @message" do
+    #        message = Message.create! valid_attributes
+    #        process :update, method: :put, params: { id: message.to_param, :message => invalid_attributes }, session: valid_session
+    #        expect(assigns(:message)).to eq(message)
+    #      end
+    #
+    #      it "re-renders the 'edit' template" do
+    #        message = Message.create! valid_attributes
+    #        process :update, method: :put, params: { id: message.to_param, :message => invalid_attributes }, session: valid_session
+    #        expect(response).to render_template("edit")
+    #      end
+    #    end
   end
-
 end

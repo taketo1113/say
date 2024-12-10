@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :edit, :update]
+  before_action :set_message, only: [ :show, :edit, :update ]
 
   # GET /messages/1
   # GET /messages/1.json
@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
   def update
     respond_to do |format|
       if @message.update(message_params)
-        format.html { redirect_to @message, notice: 'Message was successfully updated.' }
+        format.html { redirect_to @message, notice: "Message was successfully updated." }
         format.json { render :show, status: :ok, location: @message }
       else
         format.html { render :edit, status: :unprocessable_entity }

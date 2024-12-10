@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title(page_title = nil)
-    base_title = t('common.site_title')
+    base_title = t("common.site_title")
 
     if page_title.blank?
       base_title
@@ -20,12 +20,12 @@ module ApplicationHelper
 
   def datetime_view(datetime)
     return nil if datetime.blank?
-    datetime.strftime(t('time.formats.default'))
+    datetime.strftime(t("time.formats.default"))
   end
 
   def date_view(date)
     return nil if date.blank?
-    date.strftime(t('date.formats.default'))
+    date.strftime(t("date.formats.default"))
   end
 
   # Public: Pick the correct arguments for form_for when shallow routes are used.
@@ -33,10 +33,10 @@ module ApplicationHelper
   # parent - The Resource that has_* child
   # child - The Resource that belongs_to parent.
   def shallow_args(parent, child)
-    child.new_record? ? [parent, child] : child
+    child.new_record? ? [ parent, child ] : child
   end
 
   def shallow_deep_args(parent, child, grandchild)
-    grandchild.new_record? ? [parent, child, grandchild] : grandchild
+    grandchild.new_record? ? [ parent, child, grandchild ] : grandchild
   end
 end
