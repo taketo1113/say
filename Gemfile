@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.3.6"
-
-gem "rails", "7.1.5"
+gem "rails", "7.2.2"
 
 gem "mysql2", "~> 0.5"
 
@@ -34,7 +32,13 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ]
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+
+  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  gem "brakeman", require: false
+
+  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+  gem "rubocop-rails-omakase", require: false
 end
 
 #group :development do
@@ -46,8 +50,6 @@ end
 
 group :development do
   # gem "web-console"
-  gem "rack-mini-profiler"
-  # gem "spring"
   gem "awesome_print"
   gem "rails-erd"
   gem "foreman"
