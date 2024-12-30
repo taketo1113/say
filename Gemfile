@@ -3,6 +3,8 @@ source "https://rubygems.org"
 gem "rails", "8.0.1"
 
 gem "mysql2", "~> 0.5"
+gem "solid_queue"
+gem "solid_cable"
 
 gem "puma", ">= 5.0"
 

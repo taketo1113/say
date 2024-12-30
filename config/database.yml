@@ -16,10 +16,19 @@ default: &default
   socket: <%= ENV['MYSQL_SOCKET'] %>
 
 development:
-  <<: *default
-  database: say_development
-  username: <%= ENV['SAY_DATABASE_USERNAME_DEV'] %>
-  password: <%= ENV['SAY_DATABASE_PASSWORD_DEV'] %>
+  primary: &primary_development
+    <<: *default
+    database: say_development
+    username: <%= ENV['SAY_DATABASE_USERNAME_DEV'] %>
+    password: <%= ENV['SAY_DATABASE_PASSWORD_DEV'] %>
+  queue:
+    <<: *primary_development
+    database: say_development_queue
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *primary_development
+    database: say_development_cable
+    migrations_paths: db/cable_migrate
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -52,7 +61,16 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: say_production
-  username: <%= ENV['SAY_DATABASE_USERNAME'] %>
-  password: <%= ENV['SAY_DATABASE_PASSWORD'] %>
+  primary: &primary_production
+    <<: *default
+    database: say_production
+    username: <%= ENV['SAY_DATABASE_USERNAME'] %>
+    password: <%= ENV['SAY_DATABASE_PASSWORD'] %>
+  queue:
+    <<: *primary_production
+    database: say_production_queue
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *primary_production
+    database: say_production_cable
+    migrations_paths: db/cable_migrate
